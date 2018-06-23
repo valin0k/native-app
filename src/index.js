@@ -1,8 +1,12 @@
 import React, {Fragment} from 'react'
 import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+import store from './redux'
 
 const Index = () => (
-  <Fragment>Hello World!</Fragment>
+  <Provider store={store}>
+    <Fragment>Hello World!</Fragment>
+  </Provider>
 )
 
 render(
