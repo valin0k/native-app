@@ -1,15 +1,19 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
+import {HashRouter as Router} from 'react-router-dom'
 import store from './redux'
+import App from './components/App'
 
 const Index = () => (
   <Provider store={store}>
-    <Fragment>Hello World!</Fragment>
+    <Router>
+      <App />
+    </Router>
   </Provider>
 )
 
 render(
-<Index />,
+  <Index />,
   document.getElementById('root')
 )
